@@ -1,0 +1,9 @@
+#!name=AlightMotion Preminum - Luonghii
+#!desc=AlightMotion Preminum Crack
+#!author=Luonghiii
+
+[Script]
+AlightMotion = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses, script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/AlightMotion.js, requires-body=1, timeout=10
+
+[MITM]
+hostname = %APPEND% us-central1-alight-creative.cloudfunctions.net

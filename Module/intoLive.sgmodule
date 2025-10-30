@@ -1,0 +1,9 @@
+#!name=intoLive Pro - Luonghii
+#!desc=intoLive Pro Crack
+#!author=Luonghiii
+
+[Script]
+intoLive = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses, script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/intoLive.js, requires-body=1, timeout=10
+
+[mitm]
+hostname = %APPEND% buy.itunes.apple.com

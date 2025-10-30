@@ -1,0 +1,15 @@
+#!name=Locket Gold - Luonghii
+#!desc=Crack Locket Gold
+#!author=Luonghiii
+
+[Header Rewrite]
+^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
+^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
+
+[Script]
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/LocketGold.js, requires-body=true, max-size=-1, timeout=60
+deleteheader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/deleteheader.js, timeout=60
+
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com

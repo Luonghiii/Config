@@ -1,0 +1,12 @@
+#!name=Remini Preminum - Luonghiii
+#!author=Luonghiii
+#!desc=Log-only script to inspect Remini subscription responses (no modifications)
+
+
+[Script]
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/Remini.js
+^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers) url script-request-header https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/deleteheader.js
+
+
+[MITM]
+hostname = %APPEND% api.remini.ai, api.reminiapp.com, *.remini.ai, *.reminiapp.com, *.remiapi.com, api.revenuecat.com, api.rc-backup.com

@@ -1,0 +1,12 @@
+#!name=Crack Revenuecat Subscription - Luonghiii
+#!desc=Crack VSCO, Darkroom, Locket, Photoroom, Scanner Pro, Spark, Photomator, Structured - Daily Planner, Procamera, WidgetSmith, Zoom Earth, Mojo, Tiny Decisions, Tangerine, Reels Maker, Precious, Period Tracker, StreetWatch,.......
+#!unlockapplist=https://appraven.net/collection/210188962
+#!author=Luonghiii
+
+[Script]
+RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://gist.githubusercontent.com/Luonghiii/9f4a8a796a8974e40fbf1d3640e295b6/raw/crack.js, requires-body=true, max-size=-1, timeout=60
+RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/deleteheader.js, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com, api.rc-backup.com
+

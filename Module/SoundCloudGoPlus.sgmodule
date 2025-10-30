@@ -1,0 +1,9 @@
+#!name=Sounclound Go Plus - Luonghii
+#!desc=Crack Sounclound Go Plus 
+#!author=Luonghiii
+
+[Script]
+SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/SoundCloudGoPlus.js
+
+[MITM]
+hostname = %APPEND% api-mobile.soundcloud.com
