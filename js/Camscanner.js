@@ -20,7 +20,7 @@ const vip = {
     "renew_type": "year",
     "renew_method": "appstore",
     "ys_first_pay": 0,
-    "initial_tm": "4092599349",
+    "initial_tm": "1180371600",
     "product_id": "com.intsig.camscanner.premiums.oneyear.autorenewable.free.test1",
     "vip_level_info": {
         "score": 0,
@@ -29,11 +29,11 @@ const vip = {
         "start_score": 0,
         "create_time": 0
     },
-    "nxt_renew_tm": "4092599349",
+    "nxt_renew_tm": "1180371600",
     "last_payment_method": "appstore",
     "grade": 2,
     "svip": 1,
-    "expiry": 4092599349,
+    "expiry": 1180371600,
     "pending": 0,
     "level_info": {
         "level": 1,
