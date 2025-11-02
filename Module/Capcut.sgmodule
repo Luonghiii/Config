@@ -1,6 +1,9 @@
-#!name=CapCut Pro - Luonghiii
+#!name=Capcut Pro — Luonghiii
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
 #!author=Luonghiii
-#!desc=Log-only script to inspect CapCut subscription responses (no modifications)
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
 
 [Script]
 # Áp dụng cho các endpoint CapCut / capcutapi / capcutvod / ibyteimg
@@ -11,4 +14,4 @@ CapCut-Core=type=http-response,pattern=^https?:\/\/(?:i|i16|mon|mon16|editor16|f
 CapCut-Media=type=http-response,pattern=^https?:\/\/(?:p16-capcut-sg|p16-capcut-sign-sg|p16-ulike-sg|p16-vimo-sg)\.ibyteimg\.com|^https?:\/\/v16-vod\.capcutvod\.com,requires-body=1,max-size=1048576,timeout=15,script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/Capcut.js
 
 [MITM]
-hostname = %APPEND% i-sg.capcutapi.com, i16-normal-sg.capcutapi.com, mon16-normal-sg.capcutapi.com, mon-sg.capcutapi.com, editor16-normal-sg.capcutapi.com, feed16-normal-sg.capcutapi.com, passport32-normal-sg.capcutapi.com, tt-passport16-normal-sg.capcutapi.com, mssdk-sg.capcutapi.com, sdksg32-normal.evercloud.capcutapi.com, log16-normal-sg.capcutapi.com, commerce16-normal-myb.capcutapi.com, p16-capcut-sg.ibyteimg.com, p16-capcut-sign-sg.ibyteimg.com, p16-ulike-sg.ibyteimg.com, p16-vimo-sg.ibyteimg.com, v16-vod.capcutvod.com, sf16-web-tos-buz.capcutstatic.com, *api.capcut.com, *.capcutapi.com
+hostname = %APPEND% *.capcutapi.com

@@ -1,7 +1,10 @@
-#!name=Crack Revenuecat Subscription - Luonghiii
-#!desc=Crack VSCO, Darkroom, Locket, Photoroom, Scanner Pro, Spark, Photomator, Structured - Daily Planner, Procamera, WidgetSmith, Zoom Earth, Mojo, Tiny Decisions, Tangerine, Reels Maker, Precious, Period Tracker, StreetWatch,.......
+#!name=App Premium — Luonghiii
 #!unlockapplist=https://appraven.net/collection/210188962
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
 #!author=Luonghiii
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
 
 [Script]
 RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://gist.githubusercontent.com/Luonghiii/9f4a8a796a8974e40fbf1d3640e295b6/raw/crack.js, requires-body=true, max-size=-1, timeout=60

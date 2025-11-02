@@ -1,6 +1,9 @@
-#!name=Locket Gold - Luonghii
-#!desc=Crack Locket Gold
+#!name=Locket Gold — Luonghiii
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
 #!author=Luonghiii
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
 
 [Header Rewrite]
 ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag

@@ -1,7 +1,9 @@
-#!name=Remini Preminum - Luonghiii
+#!name=Remini Premium — Luonghiii
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
 #!author=Luonghiii
-#!desc=Log-only script to inspect Remini subscription responses (no modifications)
-
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
 
 [Script]
 ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/Remini.js
@@ -9,4 +11,4 @@
 
 
 [MITM]
-hostname = %APPEND% api.remini.ai, api.reminiapp.com, *.remini.ai, *.reminiapp.com, *.remiapi.com, api.revenuecat.com, api.rc-backup.com
+hostname = %APPEND% api.revenuecat.com, api.rc-backup.com
