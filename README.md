@@ -4,8 +4,8 @@ Creative Dev • AI / Web / iOS Automation
 
 ---
 
-## Ngắn gọn
-- **Nội dung:** Script iOS (Shadowrocket / Surge / QX) và mã thực nghiệm.  
+## Nội dung
+Script iOS (Shadowrocket / Surge / QX) và mã thực nghiệm.  
 
 ---
 
