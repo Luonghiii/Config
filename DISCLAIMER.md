@@ -1,24 +1,19 @@
-# Tuyên bố miễn trừ trách nhiệm (Disclaimer)
+Lưu ý đặc biệt:
 
-**Mục đích:**  
-Các tập lệnh, mã nguồn và tài nguyên trong kho lưu trữ này chỉ được cung cấp cho **mục đích thử nghiệm, nghiên cứu học thuật** và học tập cá nhân. Không có gì trong kho này được cung cấp để khuyến khích, hỗ trợ hay phục vụ cho hoạt động bất hợp pháp hoặc thương mại.
+Mọi tập lệnh phân tích mở khóa và giải mã liên quan đến các dự án được phát hành trong kho lưu trữ này chỉ dành cho mục đích thử nghiệm và nghiên cứu. Nghiêm cấm sử dụng cho mục đích thương mại. Tính hợp pháp, chính xác, đầy đủ và hiệu quả của chúng không được đảm bảo; vui lòng tự chịu trách nhiệm.
 
-**Hạn chế sử dụng:**  
-- Nghiêm cấm sử dụng cho mục đích thương mại hoặc phân phối công khai dưới bất kỳ hình thức nào mà không có sự cho phép rõ ràng từ tác giả.  
-- Người dùng chịu trách nhiệm hoàn toàn về cách sử dụng mã và tài nguyên; trước khi dùng cho bất kỳ mục đích nào, hãy tự kiểm tra tính hợp pháp tại nơi bạn sinh sống.
+Nghiêm cấm sao chép hoặc xuất bản tất cả các tệp tài nguyên trong dự án này dưới bất kỳ hình thức nào bởi bất kỳ tài khoản công khai hoặc phương tiện truyền thông tự phát nào.
 
-**Từ chối bảo đảm:**  
-Mã và tài nguyên được cung cấp “nguyên trạng” (AS IS). Tác giả không đảm bảo tính hợp lệ, an toàn, chính xác hay hiệu quả của bất kỳ tập lệnh nào. Tác giả không chịu trách nhiệm về mọi tổn thất, thiệt hại trực tiếp hoặc gián tiếp phát sinh từ việc sử dụng các tập lệnh này.
+Tôi không chịu trách nhiệm cho bất kỳ vấn đề nào về tập lệnh, bao gồm nhưng không giới hạn ở bất kỳ mất mát hoặc thiệt hại nào do lỗi tập lệnh gây ra.
 
-**Quyền và khiếu nại:**  
-Nếu một cá nhân hoặc tổ chức cho rằng nội dung trong kho này xâm phạm quyền sở hữu trí tuệ hoặc quyền riêng tư của họ, vui lòng **liên hệ** ngay: `<email@example.com>` và cung cấp bằng chứng hợp lệ (chứng minh danh tính và quyền sở hữu). Sau khi nhận được tài liệu hợp lệ, tác giả sẽ xem xét và gỡ bỏ nội dung liên quan nếu cần.
+Tôi không chịu trách nhiệm cho bất kỳ rò rỉ quyền riêng tư hoặc hậu quả nào khác phát sinh từ việc người dùng gián tiếp sử dụng tập lệnh, bao gồm nhưng không giới hạn ở việc thiết lập VPS hoặc phổ biến chúng vi phạm luật pháp hoặc quy định quốc gia/khu vực.
 
-**Khuyến nghị lưu trữ/loại bỏ:**  
-Khoản “xóa trong 24 giờ” trong bản gốc có thể không khả thi pháp lý. Thay vào đó, người dùng **nên** xóa hoặc ngừng sử dụng nội dung nếu nó gây rủi ro pháp lý cho họ — và chịu trách nhiệm tự quản lý dữ liệu trên thiết bị của mình.
+Không sử dụng bất kỳ nội dung nào cho mục đích thương mại hoặc bất hợp pháp; nếu không, bạn sẽ tự chịu hậu quả.
 
-**Chấp nhận điều khoản:**  
-Bằng cách sử dụng hoặc sao chép bất kỳ nội dung nào từ kho lưu trữ này, bạn đồng ý tuân thủ các điều khoản trên.
+Nếu bất kỳ tổ chức hoặc cá nhân nào tin rằng các tập lệnh trong dự án này có thể xâm phạm quyền của họ, họ nên thông báo ngay cho chúng tôi và cung cấp bằng chứng về danh tính và quyền sở hữu. Tôi sẽ xóa các tập lệnh liên quan sau khi nhận được các tài liệu được chứng nhận.
 
----
+Bất kỳ ai xem dự án này, dù trực tiếp hay gián tiếp, sử dụng bất kỳ tập lệnh nào trong dự án của tác giả, nên đọc kỹ tuyên bố miễn trừ trách nhiệm này. Tác giả có quyền sửa đổi hoặc bổ sung tuyên bố miễn trừ trách nhiệm này bất cứ lúc nào. Bằng việc sử dụng hoặc sao chép bất kỳ tập lệnh hoặc quy tắc liên quan nào, bạn đồng ý với tuyên bố miễn trừ trách nhiệm này.
 
-*Ghi chú:* Đây là tuyên bố miễn trừ trách nhiệm thông thường và không phải là tư vấn pháp lý. Nếu bạn cần đảm bảo pháp lý, hãy tham vấn luật sư.
+Bạn phải xóa hoàn toàn nội dung trên khỏi máy tính hoặc điện thoại di động của mình trong vòng 24 giờ sau khi tải xuống.
+
+Bằng việc sử dụng hoặc sao chép bất kỳ tập lệnh nào từ kho lưu trữ này, bạn đồng ý với tuyên bố miễn trừ trách nhiệm này. 
