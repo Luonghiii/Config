@@ -29,7 +29,7 @@ const vip = {
         "start_score": 0,
         "create_time": 0
     },
-    "nxt_renew_tm": "3389884800"
+    "nxt_renew_tm": "3389884800",
     "last_payment_method": "appstore",
     "grade": 2,
     "svip": 1,
