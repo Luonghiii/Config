@@ -1,35 +1,28 @@
 var obj = JSON.parse($response.body);
-const ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
 const times = Date.now();
 
-const id = "com.campmobile.snow.subscribe.oneyear";
+obj.result = {
+    "products": [
+        {
+            "managed": true,
+            "status": "ACTIVE",
+            "startDate": times,
+            "productId": "com.campmobile.snow.subscribe.oneyear",
+            "expireDate": 3389472000000
+        }
+    ],
+    "tickets": [
+        {
+            "managed": true,
+            "status": "ACTIVE",
+            "startDate": times,
+            "productId": "com.campmobile.snow.subscribe.oneyear",
+            "expireDate": 3389472000000
+        }
+    ],
+    "activated": true
+};
 
-if (ua && ua.toLowerCase().startsWith("iphoneapp.snow".toLowerCase())) {
-
-        obj.result = {
-        "products": [
-            {
-                "managed": true,
-                "status": "ACTIVE",
-                "startDate": times,
-                "productId": list[key].id,
-                "expireDate": 3389472000000
-            }
-        ],
-        "tickets": [
-            {
-                "managed": true,
-                "status": "ACTIVE",
-                "startDate": times,
-                "productId": list[key].id,
-                "expireDate": 3389472000000
-            }
-        ],
-        "activated": true
-        };
-        console.log("Congratulation");
-        break;
-    }
-}
+console.log("Congratulation");
 
 $done({ body: JSON.stringify(obj) });
