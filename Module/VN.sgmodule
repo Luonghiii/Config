@@ -1,0 +1,16 @@
+#!name=VN & Flow Pro — Luonghiii
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
+#!author=Luonghiii
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
+
+
+
+[Script]
+
+Flow = type=http-response, pattern=^https?:\/\/.*\.vlognow\.me\/.*-pay\/api\/v\d\/(user\/subscriptions|public\/iap\/receipt\/status), script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/VN.js, requires-body=true, max-size=-1, timeout=10
+
+
+[MITM]
+hostname = %APPEND% *.vlognow.me
