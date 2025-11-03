@@ -6,7 +6,7 @@ if (obj && obj.data && obj.data.subscribing === false) {
     "yearlyConversion": true,
     "eligible": true,
     "productId": "subscription_yearly",
-    "expireTime": "3447248400000",
+    "expireTime": "3389446800000",
     "subscribing": true
   };
 }
