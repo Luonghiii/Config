@@ -585,5 +585,4 @@ FINAL,PROXY
 localhost = 127.0.0.1
 
 [MITM]
-enable = true
 hostname = %APPEND%
