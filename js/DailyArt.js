@@ -1,6 +1,4 @@
-
-
-var obj= JSON.parse($response.body);
+var obj = JSON.parse($response.body);
 const vipa = '/api/subscription/verified';
 const vipb = '/api/auth/login';
 const vipc = '/api/check-logged';
