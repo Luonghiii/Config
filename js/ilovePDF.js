@@ -2,7 +2,7 @@ var obj = JSON.parse($response.body);
 
 obj = {
   "id": 88846584,
-  "name": "iLove PDF Premium",
+  "name": "Premium",
   "email": "luonghii123@gmail.com",
   "active": 1,
   "avatar": "https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/IMG_8541.png",
