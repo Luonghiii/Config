@@ -5,7 +5,7 @@ obj = {
   "name": "iLove PDF Premium",
   "email": "luonghii123@gmail.com",
   "active": 1,
-  "avatar": "https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/IMG_8541.jpeg",
+  "avatar": "https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/IMG_8541.png",
   "limits": {
     "merge": {
       "mb": 4000,
