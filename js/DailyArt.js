@@ -7,8 +7,8 @@ const vip = {
     "status" : "active",
     "account_type" : "patron-annual",
     "cancel_date" : null,
-    "start_date" : "2025-11-01T01:01:01.000000Z",
-    "expire_date" : "2077-05-29T01:01:01.000000Z"
+    "start_date" : "2025-11-01T01:01:01Z",
+    "expire_date" : "2077-05-29T01:01:01Z"
   };
 
 if ($request.url.indexOf(vipa) != -1){
