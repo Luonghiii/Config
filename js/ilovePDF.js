@@ -2,10 +2,10 @@ var obj = JSON.parse($response.body);
 
 obj = {
   "id": 88846584,
-  "name": "Apple",
-  "email": "luonghiii@icloud.com",
+  "name": "iLove PDF Premium",
+  "email": "luonghii123@gmail.com",
   "active": 1,
-  "avatar": "https://www.ilovepdf.com/img/avatar/default30.png",
+  "avatar": "https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/IMG_8541.jpeg",
   "limits": {
     "merge": {
       "mb": 4000,
