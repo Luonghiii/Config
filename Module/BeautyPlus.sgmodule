@@ -1,0 +1,15 @@
+#!name=BeautyPlus Premium — Luonghiii
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
+#!author=Luonghiii
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
+
+
+[Script]
+
+BeautyPlus = type = http-response, pattern=https:\/\/(api\.mr\.pixocial\.com\/v1\/manual_unlock|newbeee-api\.beautyplus\.com\/api\/v1\/asset\/balance), script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/BeautyPlus.js, requires-body=1
+
+[mitm]
+
+hostname = %APPEND% api.mr.pixocial.com, newbeee-api.beautyplus.com
