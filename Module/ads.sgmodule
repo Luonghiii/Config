@@ -1,0 +1,589 @@
+#!name=Vietnam Ultimate - AdBlock & Bypass
+#!desc=Chặn quảng cáo + Bypass cho user VN
+#!system=ios
+#!author=Luonghiii
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
+
+[General]
+
+# Tối ưu hóa kết nối
+
+bypass-system = true
+skip-proxy = localhost, *.local, captive.apple.com, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+ipv6 = true
+prefer-ipv6 = false
+dns-server = system
+
+# DNS-over-HTTPS (ưu tiên)
+doh-server = https://gotmmm9atx.cloudflare-gateway.com/dns-query, https://qikzyc2bzv.cloudflare-gateway.com/dns-query, https://dns.adguard-dns.com/dns-query
+
+# DNS fallback thông minh
+
+dns-direct-fallback-proxy = true
+dns-direct-system = false
+
+# Loại bỏ các dải IP đặc biệt khỏi VPN tunnel
+
+tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+
+# Chặn UDP cho các policy không hỗ trợ
+
+udp-policy-not-supported-behaviour = REJECT
+
+# ICMP auto reply
+
+icmp-auto-reply = true
+private-ip-answer = true
+
+[Rule]
+
+# ============================================
+
+# PHẦN 1: CHẶN QUẢNG CÁO (AD BLOCKING)
+
+# ============================================
+
+# Google Ads - Chặn toàn bộ
+
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googletagmanager.com,REJECT
+DOMAIN-SUFFIX,googletagservices.com,REJECT
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN-KEYWORD,pagead,REJECT
+DOMAIN-KEYWORD,googleads,REJECT
+DOMAIN,adservice.google.com,REJECT
+
+# YouTube Ads
+
+DOMAIN,ads.youtube.com,REJECT
+DOMAIN-SUFFIX,adserver.googlevideo.com,REJECT
+
+# Facebook Ads & Tracking
+
+DOMAIN-SUFFIX,an.facebook.com,REJECT
+DOMAIN-KEYWORD,facebook.com/tr,REJECT
+DOMAIN-KEYWORD,fbevents,REJECT
+
+# Mạng quảng cáo phổ biến
+
+DOMAIN-SUFFIX,ads.yahoo.com,REJECT
+DOMAIN-SUFFIX,advertising.com,REJECT
+DOMAIN-SUFFIX,adcolony.com,REJECT
+DOMAIN-SUFFIX,admob.com,REJECT
+DOMAIN-SUFFIX,applovin.com,REJECT
+DOMAIN-SUFFIX,chartboost.com,REJECT
+DOMAIN-SUFFIX,flurry.com,REJECT
+DOMAIN-SUFFIX,inmobi.com,REJECT
+DOMAIN-SUFFIX,unity3d.com,REJECT
+DOMAIN-SUFFIX,unityads.unity3d.com,REJECT
+DOMAIN-SUFFIX,criteo.com,REJECT
+DOMAIN-SUFFIX,outbrain.com,REJECT
+DOMAIN-SUFFIX,taboola.com,REJECT
+
+# Analytics & Tracking
+
+DOMAIN-KEYWORD,analytics,REJECT
+DOMAIN-KEYWORD,tracker,REJECT
+DOMAIN-KEYWORD,telemetry,REJECT
+DOMAIN-SUFFIX,mixpanel.com,REJECT
+DOMAIN-SUFFIX,amplitude.com,REJECT
+
+# ============================================
+
+# PHẦN 2: BYPASS - GOOGLE ECOSYSTEM
+
+# ============================================
+
+DOMAIN-KEYWORD,google,PROXY
+DOMAIN-KEYWORD,blogspot,PROXY
+DOMAIN-SUFFIX,abc.xyz,PROXY
+DOMAIN-SUFFIX,ampproject.org,PROXY
+DOMAIN-SUFFIX,android.com,PROXY
+DOMAIN-SUFFIX,androidify.com,PROXY
+DOMAIN-SUFFIX,appspot.com,PROXY
+DOMAIN-SUFFIX,autodraw.com,PROXY
+DOMAIN-SUFFIX,blogger.com,PROXY
+DOMAIN-SUFFIX,chrome.com,PROXY
+DOMAIN-SUFFIX,chromium.org,PROXY
+DOMAIN-SUFFIX,debug.com,PROXY
+DOMAIN-SUFFIX,deepmind.com,PROXY
+DOMAIN-SUFFIX,dialogflow.com,PROXY
+DOMAIN-SUFFIX,firebaseio.com,PROXY
+DOMAIN-SUFFIX,getmdl.io,PROXY
+DOMAIN-SUFFIX,ggpht.com,PROXY
+DOMAIN-SUFFIX,gmail.com,PROXY
+DOMAIN-SUFFIX,gmodules.com,PROXY
+DOMAIN-SUFFIX,godoc.org,PROXY
+DOMAIN-SUFFIX,golang.org,PROXY
+DOMAIN-SUFFIX,gstatic.com,PROXY
+DOMAIN-SUFFIX,gvt0.com,PROXY
+DOMAIN-SUFFIX,gvt1.com,PROXY
+DOMAIN-SUFFIX,gvt3.com,PROXY
+DOMAIN-SUFFIX,gwtproject.org,PROXY
+DOMAIN-SUFFIX,itasoftware.com,PROXY
+DOMAIN-SUFFIX,material.io,PROXY
+DOMAIN-SUFFIX,polymer-project.org,PROXY
+DOMAIN-SUFFIX,recaptcha.net,PROXY
+DOMAIN-SUFFIX,tensorflow.org,PROXY
+DOMAIN-SUFFIX,tfhub.dev,PROXY
+DOMAIN-SUFFIX,tiltbrush.com,PROXY
+DOMAIN-SUFFIX,waveprotocol.org,PROXY
+DOMAIN-SUFFIX,waymo.com,PROXY
+DOMAIN-SUFFIX,webmproject.org,PROXY
+DOMAIN-SUFFIX,webrtc.org,PROXY
+DOMAIN-SUFFIX,widevine.com,PROXY
+DOMAIN-SUFFIX,youtu.be,PROXY
+DOMAIN-SUFFIX,youtube.com,PROXY
+DOMAIN-SUFFIX,ytimg.com,PROXY
+DOMAIN-SUFFIX,googlevideo.com,PROXY
+
+# ============================================
+
+# PHẦN 3: SOCIAL MEDIA
+
+# ============================================
+
+# Facebook / Meta
+
+DOMAIN-KEYWORD,facebook,PROXY
+DOMAIN-KEYWORD,instagram,PROXY
+DOMAIN-SUFFIX,fb.com,PROXY
+DOMAIN-SUFFIX,fb.me,PROXY
+DOMAIN-SUFFIX,fbcdn.net,PROXY
+DOMAIN-SUFFIX,meta.com,PROXY
+DOMAIN-SUFFIX,instagram.com,PROXY
+DOMAIN-SUFFIX,cdninstagram.com,PROXY
+DOMAIN-SUFFIX,instagr.am,PROXY
+DOMAIN-SUFFIX,whatsapp.com,PROXY
+DOMAIN-SUFFIX,whatsapp.net,PROXY
+DOMAIN,pixel.facebook.com,REJECT
+DOMAIN,connect.facebook.net,REJECT
+DOMAIN-KEYWORD,fbevents,REJECT
+DOMAIN-KEYWORD,facebook.com/tr,REJECT
+
+# Instagram
+
+DOMAIN,ads.instagram.com,REJECT
+
+# Twitter / X
+
+DOMAIN-KEYWORD,twitter,PROXY
+DOMAIN-SUFFIX,x.com,PROXY
+DOMAIN-SUFFIX,twitter.com,PROXY
+DOMAIN-SUFFIX,twimg.com,PROXY
+DOMAIN-SUFFIX,t.co,PROXY
+DOMAIN,ads-api.twitter.com,REJECT
+DOMAIN,static.ads-twitter.com,REJECT
+DOMAIN,analytics.twitter.com,REJECT
+
+# LinkedIn
+
+DOMAIN-SUFFIX,linkedin.com,PROXY
+DOMAIN-SUFFIX,licdn.com,PROXY
+DOMAIN,ads.linkedin.com,REJECT
+DOMAIN,snap.licdn.com,REJECT
+
+
+# TikTok (Global)
+
+DOMAIN-KEYWORD,tiktok,PROXY
+DOMAIN-SUFFIX,tiktok.com,PROXY
+DOMAIN-SUFFIX,tiktokv.com,PROXY
+DOMAIN-SUFFIX,tiktokcdn.com,PROXY
+DOMAIN-SUFFIX,musical.ly,PROXY
+DOMAIN,ads.tiktok.com,REJECT
+DOMAIN,ads-api.tiktok.com,REJECT
+DOMAIN,ads-sg.tiktok.com,REJECT
+DOMAIN,business-api.tiktok.com,REJECT
+DOMAIN,log.byteoversea.com,REJECT
+
+# Pinterest
+
+DOMAIN,ads.pinterest.com,REJECT
+DOMAIN,log.pinterest.com,REJECT
+DOMAIN,trk.pinterest.com,REJECT
+DOMAIN,ct.pinterest.com,REJECT
+
+# Reddit
+
+DOMAIN,events.reddit.com,REJECT
+DOMAIN,events.redditmedia.com,REJECT
+DOMAIN,alb.reddit.com,REJECT
+
+# ============================================
+
+# PHẦN 4: CHATGPT / OPENAI (CHI TIẾT)
+
+# ============================================
+
+DOMAIN,api.statsig.com,PROXY
+DOMAIN,browser-intake-datadoghq.com,PROXY
+DOMAIN,chat.openai.com.cdn.cloudflare.net,PROXY
+DOMAIN,o33249.ingest.sentry.io,PROXY
+DOMAIN,openai-api.arkoselabs.com,PROXY
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,PROXY
+DOMAIN,openaicomproductionae4b.blob.core.windows.net,PROXY
+DOMAIN,production-openaicom-storage.azureedge.net,PROXY
+DOMAIN-KEYWORD,openaicom-api,PROXY
+DOMAIN-SUFFIX,algolia.net,PROXY
+DOMAIN-SUFFIX,auth0.com,PROXY
+DOMAIN-SUFFIX,challenges.cloudflare.com,PROXY
+DOMAIN-SUFFIX,chatgpt.livekit.cloud,PROXY
+DOMAIN-SUFFIX,client-api.arkoselabs.com,PROXY
+DOMAIN-SUFFIX,events.statsigapi.net,PROXY
+DOMAIN-SUFFIX,featuregates.org,PROXY
+DOMAIN-SUFFIX,host.livekit.cloud,PROXY
+DOMAIN-SUFFIX,identrust.com,PROXY
+DOMAIN-SUFFIX,intercom.io,PROXY
+DOMAIN-SUFFIX,intercomcdn.com,PROXY
+DOMAIN-SUFFIX,oaistatic.com,PROXY
+DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+DOMAIN-SUFFIX,openai.com,PROXY
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net,PROXY
+DOMAIN-SUFFIX,openaicom.imgix.net,PROXY
+DOMAIN-SUFFIX,poe.com,PROXY
+DOMAIN-SUFFIX,segment.io,PROXY
+DOMAIN-SUFFIX,sentry.io,PROXY
+DOMAIN-SUFFIX,stripe.com,PROXY
+DOMAIN-SUFFIX,turn.livekit.cloud,PROXY
+
+# ChatGPT IPs
+
+IP-CIDR,24.199.123.28/32,PROXY,no-resolve
+IP-CIDR,45.76.214.191/32,PROXY,no-resolve
+IP-CIDR,64.23.132.171/32,PROXY,no-resolve
+IP-CIDR,143.198.200.27/32,PROXY,no-resolve
+IP-CIDR,159.89.204.203/32,PROXY,no-resolve
+
+# ============================================
+
+# PHẦN 5: TELEGRAM (ĐẦY ĐỦ IPv4 & IPv6)
+
+# ============================================
+
+DOMAIN-SUFFIX,t.me,PROXY
+DOMAIN-SUFFIX,tdesktop.com,PROXY
+DOMAIN-SUFFIX,telegra.ph,PROXY
+DOMAIN-SUFFIX,telegram.me,PROXY
+DOMAIN-SUFFIX,telegram.org,PROXY
+DOMAIN-SUFFIX,telesco.pe,PROXY
+
+# Telegram IPv4
+
+IP-CIDR,91.108.4.0/22,PROXY,no-resolve
+IP-CIDR,91.108.8.0/22,PROXY,no-resolve
+IP-CIDR,91.108.12.0/22,PROXY,no-resolve
+IP-CIDR,91.108.16.0/22,PROXY,no-resolve
+IP-CIDR,91.108.56.0/22,PROXY,no-resolve
+IP-CIDR,109.239.140.0/24,PROXY,no-resolve
+IP-CIDR,149.154.160.0/20,PROXY,no-resolve
+
+# Telegram IPv6
+
+IP-CIDR,2001:B28:F23D::/48,PROXY,no-resolve
+IP-CIDR,2001:B28:F23F::/48,PROXY,no-resolve
+IP-CIDR,2001:67C:4E8::/48,PROXY,no-resolve
+
+# ============================================
+
+# PHẦN 6: STREAMING & MEDIA
+
+# ============================================
+
+# Netflix
+
+DOMAIN-SUFFIX,netflix.com,PROXY
+DOMAIN-SUFFIX,nflxvideo.net,PROXY
+DOMAIN-SUFFIX,nflxext.com,PROXY
+DOMAIN-SUFFIX,nflximg.net,PROXY
+DOMAIN-SUFFIX,nflxso.net,PROXY
+
+# Spotify
+
+DOMAIN-SUFFIX,spotify.com,PROXY
+DOMAIN-SUFFIX,scdn.co,PROXY
+DOMAIN-SUFFIX,spoti.fi,PROXY
+
+# SoundCloud
+
+DOMAIN-SUFFIX,soundcloud.com,PROXY
+DOMAIN-SUFFIX,sndcdn.com,PROXY
+
+# Twitch
+
+DOMAIN-SUFFIX,twitch.tv,PROXY
+DOMAIN-SUFFIX,twitchcdn.net,PROXY
+
+# YouTube Premium
+
+DOMAIN-SUFFIX,youtubei.googleapis.com,PROXY
+
+
+# ============================================
+
+# PHẦN 7: DEVELOPER TOOLS
+
+# ============================================
+
+# GitHub
+
+DOMAIN-SUFFIX,github.com,PROXY
+DOMAIN-SUFFIX,github.io,PROXY
+DOMAIN-SUFFIX,githubusercontent.com,PROXY
+DOMAIN-SUFFIX,githubapp.com,PROXY
+DOMAIN-SUFFIX,githubassets.com,PROXY
+
+# GitLab
+
+DOMAIN-SUFFIX,gitlab.com,PROXY
+DOMAIN-SUFFIX,gitlab.io,PROXY
+
+# Stack Overflow
+
+DOMAIN-SUFFIX,stackoverflow.com,PROXY
+DOMAIN-SUFFIX,stackexchange.com,PROXY
+DOMAIN-SUFFIX,sstatic.net,PROXY
+
+# Docker
+
+DOMAIN-SUFFIX,docker.com,PROXY
+DOMAIN-SUFFIX,docker.io,PROXY
+
+# NPM & Package Managers
+
+DOMAIN-SUFFIX,npmjs.com,PROXY
+DOMAIN-SUFFIX,npmjs.org,PROXY
+
+# JetBrains
+
+DOMAIN,download.jetbrains.com,PROXY
+
+# ============================================
+
+# PHẦN 8: CLOUD SERVICES
+
+# ============================================
+
+# AWS
+
+DOMAIN-SUFFIX,amazonaws.com,PROXY
+DOMAIN-SUFFIX,aws.amazon.com,PROXY
+
+# Cloudflare
+
+DOMAIN-SUFFIX,cloudflare.com,PROXY
+DOMAIN-SUFFIX,cloudflare-dns.com,PROXY
+
+# Akamai
+
+DOMAIN-SUFFIX,akamai.net,PROXY
+DOMAIN-SUFFIX,akamaihd.net,PROXY
+DOMAIN-SUFFIX,akadns.net,PROXY
+
+# Dropbox
+
+DOMAIN-SUFFIX,dropbox.com,PROXY
+DOMAIN-SUFFIX,dropboxapi.com,PROXY
+DOMAIN-SUFFIX,dropboxstatic.com,PROXY
+DOMAIN-SUFFIX,dropboxusercontent.com,PROXY
+
+# Google Drive (subset of Google)
+
+DOMAIN-SUFFIX,drive.google.com,PROXY
+
+# ============================================
+
+# PHẦN 9: NEWS & MEDIA
+
+# ============================================
+
+DOMAIN-SUFFIX,nytimes.com,PROXY
+DOMAIN-SUFFIX,wsj.com,PROXY
+DOMAIN-SUFFIX,wsj.net,PROXY
+DOMAIN-SUFFIX,bloomberg.com,PROXY
+DOMAIN-SUFFIX,bbc.com,PROXY
+DOMAIN-SUFFIX,bbc.co.uk,PROXY
+DOMAIN-SUFFIX,reuters.com,PROXY
+DOMAIN-SUFFIX,theguardian.com,PROXY
+DOMAIN-SUFFIX,medium.com,PROXY
+DOMAIN-SUFFIX,tumblr.com,PROXY
+DOMAIN-SUFFIX,wordpress.com,PROXY
+DOMAIN-SUFFIX,wp.com,PROXY
+
+# Wikipedia
+
+DOMAIN-SUFFIX,wikipedia.org,PROXY
+DOMAIN-SUFFIX,wikimedia.org,PROXY
+DOMAIN-SUFFIX,mediawiki.org,PROXY
+
+# ============================================
+
+# PHẦN 10: VPN & PRIVACY TEST SITES
+
+# ============================================
+
+DOMAIN-SUFFIX,dnsleaktest.com,PROXY
+DOMAIN-SUFFIX,dnsleak.com,PROXY
+DOMAIN-SUFFIX,ipleak.net,PROXY
+DOMAIN-SUFFIX,browserleaks.com,PROXY
+DOMAIN-SUFFIX,browserleaks.org,PROXY
+DOMAIN-SUFFIX,whoer.net,PROXY
+DOMAIN-SUFFIX,perfect-privacy.com,PROXY
+
+# ============================================
+
+# PHẦN 11: GAMING
+
+# ============================================
+
+# Steam
+
+DOMAIN-SUFFIX,steampowered.com,PROXY
+DOMAIN-SUFFIX,steamgames.com,PROXY
+DOMAIN-SUFFIX,steamcommunity.com,PROXY
+DOMAIN-SUFFIX,steamstatic.com,PROXY
+DOMAIN-SUFFIX,steamusercontent.com,PROXY
+DOMAIN-SUFFIX,steamcontent.com,PROXY
+DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,PROXY
+
+# Blizzard / Battle.net
+
+DOMAIN-SUFFIX,battle.net,PROXY
+DOMAIN-SUFFIX,blizzard.com,PROXY
+DOMAIN-SUFFIX,battlenet.com.cn,PROXY
+
+# Epic Games
+
+DOMAIN-SUFFIX,epicgames.com,PROXY
+DOMAIN-SUFFIX,unrealengine.com,PROXY
+
+# Discord
+
+DOMAIN-SUFFIX,discord.com,PROXY
+DOMAIN-SUFFIX,discord.gg,PROXY
+DOMAIN-SUFFIX,discordapp.com,PROXY
+DOMAIN-SUFFIX,discordapp.net,PROXY
+
+# ============================================
+
+# PHẦN 12: MISC SERVICES
+
+# ============================================
+
+# Zoom
+
+DOMAIN-SUFFIX,zoom.us,PROXY
+DOMAIN-SUFFIX,zoom.com,PROXY
+
+# Microsoft Services (chọn lọc)
+
+DOMAIN-SUFFIX,office365.com,PROXY
+DOMAIN-SUFFIX,outlook.com,PROXY
+DOMAIN-SUFFIX,live.com,PROXY
+
+# PayPal
+
+DOMAIN-SUFFIX,paypal.com,PROXY
+DOMAIN-SUFFIX,paypalobjects.com,PROXY
+
+# Bing
+
+DOMAIN-SUFFIX,bing.com,PROXY
+
+# DuckDuckGo
+
+DOMAIN-SUFFIX,duckduckgo.com,PROXY
+
+# Archive
+
+DOMAIN-SUFFIX,archive.org,PROXY
+
+# Reddit
+
+DOMAIN-SUFFIX,reddit.com,PROXY
+DOMAIN-SUFFIX,redd.it,PROXY
+DOMAIN-SUFFIX,redditstatic.com,PROXY
+
+# Imgur
+
+DOMAIN-SUFFIX,imgur.com,PROXY
+
+# Flickr
+
+DOMAIN-SUFFIX,flickr.com,PROXY
+DOMAIN-SUFFIX,staticflickr.com,PROXY
+
+# Pinterest
+
+DOMAIN-SUFFIX,pinterest.com,PROXY
+DOMAIN-SUFFIX,pinimg.com,PROXY
+
+# ============================================
+
+# PHẦN 13: ACADEMIC & RESEARCH
+
+# ============================================
+
+DOMAIN-SUFFIX,nature.com,PROXY
+DOMAIN-SUFFIX,sciencemag.org,PROXY
+DOMAIN-SUFFIX,ieee.org,PROXY
+DOMAIN-SUFFIX,acm.org,PROXY
+DOMAIN-SUFFIX,springer.com,PROXY
+DOMAIN-SUFFIX,arxiv.org,PROXY
+
+# ============================================
+
+# PHẦN 14: HEURISTIC
+# Chặn theo keyword
+
+# ============================================
+
+DOMAIN-KEYWORD,adservice,REJECT
+DOMAIN-KEYWORD,analytics,REJECT
+DOMAIN-KEYWORD,telemetry,REJECT
+DOMAIN-KEYWORD,tracking,REJECT
+DOMAIN-KEYWORD,tracker,REJECT
+DOMAIN-KEYWORD,pagead,REJECT
+DOMAIN-KEYWORD,doubleclick,REJECT
+DOMAIN-KEYWORD,-ads-,REJECT
+DOMAIN-KEYWORD,/ads/,REJECT
+
+# Chặn theo pattern
+
+DOMAIN-KEYWORD,metric,REJECT
+DOMAIN-KEYWORD,stats,REJECT
+DOMAIN-KEYWORD,pixel,REJECT
+DOMAIN-KEYWORD,beacon,REJECT
+
+# ============================================
+
+# PHẦN 15: LAN & FINAL RULES
+
+# ============================================
+
+# Mạng LAN
+
+IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,172.16.0.0/12,DIRECT
+IP-CIDR,127.0.0.0/8,DIRECT
+
+# Địa chỉ multicast & broadcast
+
+IP-CIDR,224.0.0.0/4,DIRECT
+IP-CIDR,255.255.255.255/32,DIRECT
+
+# Final - Mặc định đi qua PROXY (bảo mật cao)
+
+FINAL,PROXY
+
+[Host]
+localhost = 127.0.0.1
+
+[MITM]
+enable = true
+hostname = %APPEND%
