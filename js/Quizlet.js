@@ -1,7 +1,20 @@
-var body = $response.body;
+re(
+    '"_isEligibleForFreeTrial":true@"_featurePlanType":null@"_isConfirmationRequired":true',
+    '"_isEligibleForFreeTrial":false@"_featurePlanType":"premium"@"_isConfirmationRequired":false'
+);
 
-// Ẩn banner + thêm premium plan
-body = body.replace(/"_isEligibleForFreeTrial":true/g, '"_isEligibleForFreeTrial":false');
-body = body.replace(/"_featurePlanType":null/g, '"_featurePlanType":"premium"');
-
-$done({body: body});
+function re(){
+    var body = $response.body;
+    if(arguments[0].includes("@")){
+        var regs = arguments[0].split("@");
+        var strs = arguments[1].split("@");
+        for(i=0; i<regs.length; i++){
+            var reg = new RegExp(regs[i], "g");
+            body = body.replace(reg, strs[i]);
+        }
+    } else {
+        var reg = new RegExp(arguments[0], "g");
+        body = body.replace(reg, arguments[1]);
+    }
+    $done({body: body});
+}
