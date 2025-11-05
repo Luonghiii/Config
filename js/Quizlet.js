@@ -1,4 +1,4 @@
-re('"_isEligibleForFreeTrial":true@"_featurePlanType":null', '"_isEligibleForFreeTrial":false@"_featurePlanType":"annual"');
+re('"_isEligibleForFreeTrial":\\w+@"_featurePlanType":null@"type":0','"_isEligibleForFreeTrial":false@"_featurePlanType":"annual"@"type":1');
 
 function re(){
     var body=$response.body;
