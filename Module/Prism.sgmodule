@@ -1,0 +1,14 @@
+#!name=Prism Plus — Luonghiii
+#!desc=Research / Educational module. Không dùng cho mục đích trái pháp luật hoặc thương mại.
+#!author=Luonghiii
+#!updated=2025-11-01
+# Contact: luonghii123@gmail.com
+# NOTE: This module is provided for testing and educational purposes only.
+
+
+[Script]
+
+Prism = type=http-response,pattern=^https:\/\/apis\.naver\.com\/prism\/prism-auth-api\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Luonghiii/Config/refs/heads/main/js/prism.js
+
+[MITM]
+hostname = apis.naver.com
