@@ -22,15 +22,15 @@ const Locket = {
   expires_date: "2100-10-10T00:00:00Z",
   grace_period_expires_date: null,
   unsubscribe_detected_at: null,
-  original_purchase_date: "2025-11-01T00:00:00Z",
-  purchase_date: "2025-11-01T00:00:00Z",
+  original_purchase_date: "2026-02-16T00:00:00Z",
+  purchase_date: "2026-02-16T00:00:00Z",
   store: "app_store"
 };
 
 // ===== Entitlement giả =====
 const Gold = {
   grace_period_expires_date: null,
-  purchase_date: "2025-11-01T00:00:00Z",
+  purchase_date: "2026-02-16T00:00:00Z",
   product_identifier: "com.Locket.premium.yearly",
   expires_date: "2100-10-10T00:00:00Z"
 };
