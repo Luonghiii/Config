@@ -11,7 +11,7 @@ obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
 obj.subscriber.entitlements = obj.subscriber.entitlements || {};
 
 // ===== Thông báo cho user =====
-obj.Attention = "Locket by Luong
+obj.Attention = "Locket by Luong"
 
 // ===== Subscription giả (mô phỏng giao dịch App Store) =====
 const Locket = {
